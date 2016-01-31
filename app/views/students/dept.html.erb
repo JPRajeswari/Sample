@@ -1,0 +1,22 @@
+<td><%= link_to "add a new student", new_student_path%></td>
+<table>
+  <thead>
+    <th> sno </th>
+    <th> name </th>
+    <th> dept </th>
+    <th> age </th>
+    <th></th>
+  </thead>
+  <tbody>
+    <% @dept_students.each do |student| %>
+      <tr>
+        <td><%= student.sno %></td>
+        <td><%= student.name %></td>
+        <td><%= student.dept %></td>
+        <td><%= student.age %> </td>
+        <td><%= link_to "edit", edit_student_path(student) %></td>
+        <td><%= link_to "show",student_path(student) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,12 @@
+<table>
+  <thead>
+    <th> dept </th>
+  </thead>
+  <tbody>
+    <% @departments.each do |dept| %>
+      <tr>
+        <td><%= link_to dept.dept, dept_students_path(dept.dept) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
